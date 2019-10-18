@@ -1,0 +1,108 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        .mcs-loader-center {
+            border-top: 16px solid #2e89a3;
+            border-right: 16px solid #2e89a3;
+            border-bottom: 16px solid #2e89a3;
+            border-left: 16px solid transparent;
+            border-radius: 50%;
+            height: 60px;
+            width: 60px;
+            position: absolute;
+            -webkit-animation: spin 9s linear infinite;
+            animation: spin 9s linear infinite;
+
+        }
+
+        .mcs-loader-inner {
+            border-top: 16px solid lightblue;
+            border-right: 16px solid lightblue;
+            border-bottom: 16px solid lightblue;
+            border-left: 16px solid transparent;
+            border-radius: 50%;
+            height: 28px;
+            width: 28px;
+            position: absolute;
+            -webkit-animation: spin 9s linear infinite;
+            animation: spin 9s linear infinite;
+        }
+
+        .mcs-loader-outer {
+            border-top: 16px solid #235c6c;
+            border-right: 16px solid #235c6c;
+            border-bottom: 16px solid transparent;
+            border-left: 16px solid transparent;
+            border-radius: 50%;
+            height: 92px;
+            width: 92px;
+            position: absolute;
+            transform: rotate(45deg);
+            -webkit-animation: spin 9s linear infinite;
+            animation: spin 9s linear infinite;
+            margin: -16px;
+
+        }
+
+        .mcs-loader-outer-container {
+            border-top: 16px solid #235c6c;
+            border-right: 16px solid #235c6c;
+            border-bottom: 16px solid #235c6c;
+            border-left: 16px solid transparent;
+            border-radius: 50%;
+            height: 92px;
+            width: 92px;
+            position: relative;
+            transform: rotate(45deg);
+            -webkit-animation: spin 7s linear infinite;
+            animation: spin 7s linear infinite;
+
+        }
+
+        .center-screen {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            min-height: 100vh;
+        }
+
+
+        @-webkit-keyframes spin {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+
+        @keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<div id="loaderIcon" class="container center-screen">
+    <div class="mcs-loader-outer-container">
+        <div class="mcs-loader-outer">
+        </div>
+        <div class="mcs-loader-center">
+        </div>
+        <div class="mcs-loader-center">
+            <div class="mcs-loader-inner"></div>
+        </div>
+    </div>
+</div>
+
+</html>
